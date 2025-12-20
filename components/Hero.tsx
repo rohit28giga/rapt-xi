@@ -11,10 +11,10 @@ const Hero: React.FC = () => {
         <div className="lg:col-span-5 text-left reveal-on-scroll z-20 flex flex-col justify-center py-12 lg:py-0">
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-[1.1] tracking-tight mb-8 font-jakarta drop-shadow-[0_0_40px_rgba(45,212,191,0.2)]">
               <span className="block lg:whitespace-nowrap">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-500 font-medium">Breakthrough</span> AI from
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-500 font-light">Breakthrough</span> AI from
               </span>
               <span className="block lg:whitespace-nowrap">
-                evidence to <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-500 font-medium">finalization</span>
+                evidence to <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-500 font-light">finalization</span>
               </span>
             </h1>
             
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button className="px-10 py-4 rounded-lg text-white font-medium hover:bg-white/5 border border-white/10 transition-all flex items-center gap-2 backdrop-blur-sm hover:border-teal-500/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.1)]">
+              <button className="px-10 py-4 rounded-lg text-white font-light hover:bg-white/5 border border-white/10 transition-all flex items-center gap-2 backdrop-blur-sm hover:border-teal-500/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.1)]">
                 Start Audit &rarr;
               </button>
             </div>
