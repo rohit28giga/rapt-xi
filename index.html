@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAPT | Agentic AI for Audit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Mona Sans CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@github/mona-sans@1.0.1/dist/styles.css">
+    <!-- Gowun Dodum Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Satoshi', 'Inter', 'sans-serif'],
+              montserrat: ['Montserrat', 'sans-serif'],
+              brand: ['"Gowun Dodum"', 'sans-serif'],
+              jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#2dd4bf',
+                foreground: '#000000',
+              },
+              navy: {
+                800: '#0f3863',
+                900: '#0a2540',
+                950: '#05162b',
+              },
+              teal: {
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                900: '#134e4a',
+              },
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 12s ease-in-out infinite',
+              'scan': 'scan 3s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'crystal-spin': 'crystalSpin 20s linear infinite',
+              'reverse-spin': 'reverseSpin 15s linear infinite',
+              'draw': 'draw 8s ease-in-out infinite',
+              'particle-flow': 'particleFlow 2s linear infinite',
+              'alert-pulse': 'alertPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scroll-vertical': 'scrollVertical 10s linear infinite',
+              'hover-float': 'hoverFloat 4s ease-in-out infinite',
+              'morph-slow': 'morph 8s ease-in-out infinite',
+              'morph-fast': 'morph 4s ease-in-out infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pan-slow': 'pan 60s linear infinite',
+              'bounce-slow': 'bounce 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              hoverFloat: {
+                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                '50%': { transform: 'translateY(-10px) translateX(5px)' },
+              },
+              scan: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
+              crystalSpin: {
+                '0%': { transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+                '100%': { transform: 'rotateX(360deg) rotateY(360deg) rotateZ(360deg)' },
+              },
+              reverseSpin: {
+                '0%': { transform: 'rotateX(360deg) rotateY(360deg) rotateZ(360deg)' },
+                '100%': { transform: 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+              },
+              draw: {
+                '0%': { strokeDashoffset: '1000' },
+                '100%': { strokeDashoffset: '0' }
+              },
+              particleFlow: {
+                '0%': { transform: 'translateX(-100%)', opacity: 0 },
+                '50%': { opacity: 1 },
+                '100%': { transform: 'translateX(100%)', opacity: 0 }
+              },
+              alertPulse: {
+                '0%, 100%': { borderColor: 'rgba(239, 68, 68, 0.3)', boxShadow: '0 0 20px rgba(239, 68, 68, 0.1)' },
+                '50%': { borderColor: 'rgba(239, 68, 68, 0.8)', boxShadow: '0 0 40px rgba(239, 68, 68, 0.4)' }
+              },
+              scrollVertical: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' }
+              },
+              morph: {
+                '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+                '50%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+              },
+              pan: {
+                '0%': { transform: 'translate(0, 0)' },
+                '100%': { transform: 'translate(-500px, -500px)' },
+              },
+              bounce: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: transparent;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      
+      .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+      }
+
+      /* 3D Utilities */
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react,react-dom",
+    "clsx": "https://esm.sh/clsx@2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@2.5.4",
+    "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@1.1.0?external=react,react-dom",
+    "class-variance-authority": "https://esm.sh/class-variance-authority@0.7.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
